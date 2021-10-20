@@ -34,7 +34,7 @@ export const FormComponent = () => {
       },
     };
 
-    fetch(`${process.env.PRODUCTION_BASE_URL}/api/prediction/`, options)
+    fetch(`${process.env.PRODUCTION_BASE_URL}api/prediction/`, options)
       .then((res) => res.json())
       .then((response) => {
         setPrediction(response["quality"][0]);
