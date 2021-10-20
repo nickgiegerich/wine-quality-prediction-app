@@ -25,6 +25,8 @@ export const FormComponent = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
+    // wine-quality-prediction-app.vercel.app/:1 Access to fetch at 'https://wine-quality-ml-api.herokuapp.com/api/prediction/' from origin 'https://wine-quality-prediction-app.vercel.app' has been blocked by CORS policy: Request header field access-control-allow-origin is not allowed by Access-Control-Allow-Headers in preflight response.
+
     const options = {
       method: "POST",
       body: JSON.stringify(wineInputs),
@@ -32,7 +34,7 @@ export const FormComponent = () => {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-        // "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Headers": "*",
       },
     };
 
