@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 export const FormComponent = () => {
   const [wineInputs, setWineInputs] = useState({
     fixed_acidity: 6.7,
@@ -20,13 +19,15 @@ export const FormComponent = () => {
 
   const [prediction, setPrediction] = useState(null);
   const [confidence, setConfidence] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   // below is the base code for a post request to our API
   const handleOnSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    // wine-quality-prediction-app.vercel.app/:1 Access to fetch at 'https://wine-quality-ml-api.herokuapp.com/api/prediction/' from origin 
-    // 'https://wine-quality-prediction-app.vercel.app' has been blocked by CORS policy: Request header field access-control-allow-origin is not 
+    // wine-quality-prediction-app.vercel.app/:1 Access to fetch at 'https://wine-quality-ml-api.herokuapp.com/api/prediction/' from origin
+    // 'https://wine-quality-prediction-app.vercel.app' has been blocked by CORS policy: Request header field access-control-allow-origin is not
     // allowed by Access-Control-Allow-Headers in preflight response.
 
     const options = {
@@ -45,6 +46,7 @@ export const FormComponent = () => {
       .then((response) => {
         setPrediction(response["quality"][0]);
         setConfidence(response["confidence"]);
+        setLoading(false);
       })
       .catch((error) => console.log(error.message));
   };
@@ -290,7 +292,7 @@ export const FormComponent = () => {
         <div className="p-5 text-center ">
           <button
             type="submit"
-            className="bg-green-500 text-white py-3 px-7 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:skew-x-2 hover:-skew-y-2"
+            className="bg-green-500 text-white py-3 px-7 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:skew-x-2 hover:-skew-y-2 whitespace-nowrap"
           >
             submit model inputs
           </button>
@@ -299,15 +301,22 @@ export const FormComponent = () => {
       <div className="text-center">
         <div>based on the above inputs this wine is predicted to be ...</div>
         {prediction == null && <div>(*hint: press the submit button)</div>}
-        {prediction == 1 && (
+        {loading && (
+          <div className="flex justify-items-center justify-center">
+            <svg class="animate-spin h-10 w-10 mr-3" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50" />
+            </svg>
+          </div>
+        )}
+        {prediction == 1 && !loading && (
           <div className="p-5 text-3xl font-semibold text-green-900">Good</div>
         )}
-        {prediction == 0 && (
+        {prediction == 0 && !loading && (
           <div className="p-5 text-3xl font-semibold text-red-900">Bad</div>
         )}
       </div>
       <div className="text-center">
-        {confidence && (
+        {confidence && !loading && (
           <div>
             {/* <div>
               based on the above inputs this wine is predicted to be ...
