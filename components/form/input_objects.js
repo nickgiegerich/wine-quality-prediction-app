@@ -1,0 +1,81 @@
+const list_of_inputs = [
+  {
+    name: "fixed_acidity",
+    min: 4.5,
+    max: 16.0,
+    step: 0.01,
+    // value: inputs.fixed_acidity,
+  },
+  {
+    name: "volatile_acidity",
+    min: 0.120000,
+    max: 1.580000,
+    step: 0.00001,
+    // value: inputs.volatile_acidity,
+  },
+  {
+    name: "citric_acid",
+    min: 0.0,
+    max: 1.0,
+    step: 0.01,
+    // value: inputs.citric_acid,
+  },
+  {
+    name: "residual_sugar",
+    min: 0.9,
+    max: 15.5,
+    step: 0.1,
+    // value: inputs.residual_sugar,
+  },
+  {
+    name: "chlorides",
+    min: 0.012,
+    max: 0.611000,
+    step: 0.015,
+    // value: inputs.chlorides,
+  },
+  {
+    name: "free_sulfur_dioxide",
+    min: 1.0,
+    max: 72.0,
+    step: 1.0,
+    // value: inputs.free_sulfur_dioxide,
+  },
+  {
+    name: "total_sulfur_dioxide",
+    min: 6.0,
+    max: 289.0,
+    step: 1.0,
+    // value: inputs.total_sulfur_dioxide,
+  },
+  {
+    name: "density",
+    min: 0.990070,
+    max: 1.003690,
+    step: 0.00001,
+    // value: inputs.density,
+  },
+  {
+    name: "ph",
+    min: 2.74,
+    max: 4.01,
+    step: 0.05,
+    // value: inputs.ph,
+  },
+  {
+    name: "sulphates",
+    min: 0.33,
+    max: 2.00,
+    step: 0.03,
+    // value: inputs.sulphates,
+  },
+  {
+    name: "alcohol",
+    min: 8.4,
+    max: 14.9,
+    step: 0.01,
+    // value: inputs.alcohol,
+  },
+];
+
+export default list_of_inputs;
