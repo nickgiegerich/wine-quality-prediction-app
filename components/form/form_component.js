@@ -42,7 +42,7 @@ export const FormComponent = () => {
         setPrediction(response["quality"][0]);
         setConfidence(response["confidence"]);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error.message));
   };
 
   const handleModelChoice = (e) => {
