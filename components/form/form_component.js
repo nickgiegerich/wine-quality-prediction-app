@@ -30,6 +30,7 @@ export const FormComponent = () => {
       body: JSON.stringify(wineInputs),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       },
     };
 
