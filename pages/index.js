@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
+import Footer from "../components/footer";
 import { FormComponent } from "../components/form/form_component";
 import Header from "../components/header";
 import Nav from "../components/header/nav";
@@ -28,6 +29,9 @@ export default function Home() {
         <div id="pdtool" className="pt-40 -mt-40"></div>
         <div>
           <FormComponent />
+        </div>
+        <div className="mt-20 absolute w-screen">
+          <Footer />
         </div>
       </main>
     </div>
