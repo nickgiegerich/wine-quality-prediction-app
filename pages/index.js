@@ -10,7 +10,7 @@ import DescriptiveTable from "../components/table";
 export default function Home() {
   return (
     <div>
-      <div>
+      <div className="mb-10">
         <Nav />
       </div>
       <main className="wrapper">

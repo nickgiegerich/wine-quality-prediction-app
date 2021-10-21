@@ -49,11 +49,12 @@ export default function BarChart({ bChartData, bChartLabel }) {
     <div>
       <Bar
         data={data}
-        width={600}
-        height={400 }
+        // width={600}
+        height={400}
         options={{
             responsive: true,
-            maintainAspectRatio: true
+            maintainAspectRatio: false,
+
         }}
       />
     </div>

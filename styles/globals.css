@@ -93,7 +93,7 @@ input[type='range'] {
 
 .section { 
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -124,4 +124,8 @@ circle {
   stroke-width: 10;
   stroke-linecap: round;
   transform-origin: 50% 50%;
+}
+
+canvas {
+  height: 100% !important;
 }

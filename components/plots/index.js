@@ -30,16 +30,15 @@ export default function Plots() {
   };
 
   return (
-    <div className="border border-red-900 rounded-2xl shadow-lg m-5">
-      <div className="flex flex-col flex-wrap justify-evenly">
+    <div className="border border-gray-900 rounded-2xl shadow-lg m-5">
+      <div className="flex flex-col justify-evenly">
         <div className="font-thin text-3xl text-center pt-2">
           Data Insights
         </div>
         <div className="font-extralight text-xl text-center pt-2 pb-10">
           below wine properties are selected and graphed accordingly
         </div>
-        <div className="pb-10">
-          <div className="flex flex-row justify-evenly flex-wrap">
+          <div className="flex flex-row justify-evenly flex-wrap pb-10">
             <div>
               <div className="flex flex-col pb-10">
                 <div className="text-center font-semibold text-lg">
@@ -77,7 +76,7 @@ export default function Plots() {
                 </div>
               </div>
             </div>
-            <div className="">
+            <div>
               <div className="flex flex-col">
                 <div className="text-center font-semibold text-lg">
                   the scatter chart shows the relation between the selected property<br/>and the amount of alcohol in a given wine that has a quality rating greater than 6
@@ -114,7 +113,7 @@ export default function Plots() {
               </div>
             </div>
           </div>
-        </div>
+        
       </div>
     </div>
   );

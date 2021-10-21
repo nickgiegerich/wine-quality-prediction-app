@@ -66,7 +66,7 @@ export const FormComponent = () => {
   };
 
   return (
-    <div className="border border-red-900 rounded-2xl shadow-lg m-5">
+    <div className="border border-gray-900 rounded-2xl shadow-lg m-5">
       <h3 className="font-thin text-3xl text-center pt-2">
         Red Wine Quality Prediction Tool
       </h3>
@@ -294,7 +294,8 @@ export const FormComponent = () => {
             type="submit"
             className="bg-green-500 text-white py-3 px-7 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:skew-x-2 hover:-skew-y-2 whitespace-nowrap"
           >
-            submit model inputs
+            {!loading ? "submit model inputs" : "running..."}
+            
           </button>
         </div>
       </form>
@@ -303,7 +304,7 @@ export const FormComponent = () => {
         {prediction == null && <div>(*hint: press the submit button)</div>}
         {loading && (
           <div className="flex justify-items-center justify-center">
-            <svg class="animate-spin h-10 w-10 mr-3" viewBox="0 0 100 100">
+            <svg className="animate-spin h-10 w-10 mr-3" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50" />
             </svg>
           </div>
