@@ -19,7 +19,7 @@ export default function Home() {
           <Header />
         </div>
         <div id="overview" className="pt-40 -mt-40"></div>
-        <div>
+        <div className="pt-24">
           <DescriptiveTable />
         </div>
         <div id="insights" className="pt-40 -mt-40"></div>

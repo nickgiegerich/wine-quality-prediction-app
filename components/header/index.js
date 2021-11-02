@@ -2,7 +2,7 @@ export default function Header() {
   return (
     <div>
       <div className="section parallax bg md:h-full lg:h-screen ">
-        <div className="bg-white bg-opacity-90 shadow-lg md:w-full lg:w-2/3 text-center rounded-md text-black mt-16 lg:mt-64 pb-10 pt-4">
+        <div className="bg-white bg-opacity-90 mx-5 shadow-lg md:w-full md:mx-5 lg:w-full lg:mx-7 text-center rounded-md text-black mt-16 lg:mt-64 pb-10 pt-4">
           <div className="text-4xl font-light">
             Wine Quality Prediction Tool
           </div>
