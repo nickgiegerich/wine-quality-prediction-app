@@ -22,7 +22,7 @@ export default function Home() {
         <div className="pt-24">
           <DescriptiveTable />
         </div>
-        {/* <div id="insights" className="pt-40 -mt-40"></div> */}
+        <div id="insights" className="pt-40 -mt-40"></div>
         <div>
           <Plots />
         </div>
@@ -30,10 +30,10 @@ export default function Home() {
         <div>
           <FormComponent />
         </div>
-      </main>
         <div className="mt-20 absolute w-screen">
           <Footer />
         </div>
+      </main>
     </div>
   );
 }

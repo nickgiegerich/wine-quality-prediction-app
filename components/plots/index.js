@@ -113,7 +113,6 @@ export default function Plots() {
               </div>
             </div>
           </div>
-        
       </div>
     </div>
   );
